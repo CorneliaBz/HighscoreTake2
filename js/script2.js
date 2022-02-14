@@ -7,8 +7,6 @@
     const playerimg = document.getElementById(`pimg`);
     const computerimg = document.getElementById(`cimg`);
 
-    const highscoreUrl = `https://highscore-29947-default-rtdb.europe-west1.firebasedatabase.app/highscore.json`;
-
     document.getElementById(`name`).addEventListener("click", displayPlayerName);
     document.getElementById(`sten`).addEventListener("click", playerSten);
     document.getElementById(`sax`).addEventListener("click", playerSax);
@@ -69,8 +67,6 @@
         const compChoice = randomChoices();
         computerimg.src = `img/${compChoice}.png`
         const playerChoice = document.getElementById(`playerResult`).firstChild.alt;
-
-        console.log(`spelare `, playerChoice, `dator`, compChoice)
 
         if(compChoice === playerChoice){
             announcment.innerText = `Oavgjort`;
@@ -158,6 +154,7 @@
 //DATABASEN + HIGHSCORE
 
     function compareScore(){
+        const highscoreUrl = `https://highscore-29947-default-rtdb.europe-west1.firebasedatabase.app/highscore.json`;
         const scorePromise = fetch(highscoreUrl);
         const jsonPromise = scorePromise.then(
             function(promiseValue){
@@ -172,18 +169,18 @@
     
                 let customId;
                 let newArray; 
-                console.log(pScore);
+                // console.log(pScore);
                 for(let i = 0; i < scoreArray.length; i++){
                     
                     if (pScore >= scoreArray[i].score){
-                        console.log(`${pScore} ska in på highscore index`, scoreArray.indexOf(scoreArray[i]))
+                        // console.log(`${pScore} ska in på highscore index`, scoreArray.indexOf(scoreArray[i]))
     
                         customId = scoreArray.indexOf(scoreArray[i]);
-                        (console.log(customId))
+                        // (console.log(customId))
                         
                         break;
                     }else{
-                        console.log(`${pScore} ska ej in på highscore index`, scoreArray.indexOf(scoreArray[i]))
+                        // console.log(`${pScore} ska ej in på highscore index`, scoreArray.indexOf(scoreArray[i]))
                     }
                 }
     
@@ -194,7 +191,7 @@
                     score: pScore
                 });
                 newArray.pop();
-                console.log(newArray)
+                // console.log(newArray)
     
                 //Uppdatera URL beroende på index
                 for(i = customId; i < 5; i++){
@@ -218,7 +215,7 @@
     
     //Funktion för att hämta highscore och skriva ut det i DOM:en
     function getHighscore(){
-        
+        const highscoreUrl = `https://highscore-29947-default-rtdb.europe-west1.firebasedatabase.app/highscore.json`;
         const scorePromise = fetch(highscoreUrl);
         
         const jsonPromise = scorePromise.then(
@@ -226,11 +223,11 @@
                 return promiseValue.json();
             }
         );
-        console.log(jsonPromise);
+        // console.log(jsonPromise);
         
         jsonPromise.then(
             function(promiseValue){
-                console.log(`Porimise i variabler`, promiseValue);
+                // console.log(`Porimise i variabler`, promiseValue);
     
                 for(let i = 0; i < promiseValue.length; i++){
     
