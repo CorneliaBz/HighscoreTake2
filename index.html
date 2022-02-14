@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highscore take 2!</title>
+    <script src=js/script2.js defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/header.png" alt="">
+    </header>
+    <article>
+        <input type="text" value="Ditt namn"> 
+        <button id="name">Jag är redo!</button>
+        <section>
+            <div>
+                <h2>Fajter</h2>
+                <p id="playerScore">0</p>
+                <div id="playerResult"><img id="pimg" src="img/sten.png" alt=""></div>
+            </div>
+            <div>
+                <h2>Ran-Dom (CPU)</h2>
+                <p id="computerScore">0</p>
+                <div id="compResult"><img id="cimg" src="img/sten.png" alt=""></div>
+            </div>
+        </section>
+        <p id="announcment">"FAJT, FAJT, FAJT!"</p>
+        <p>Välj din fajter:</p>
+        <button class="btn" id="sten"><img src="img/sten.png" alt=""></button>
+        <button class="btn" id="sax"><img src="img/sax.png" alt=""></button>
+        <button class="btn" id="pase"><img src="img/påse.png" alt=""></button>
+
+        <section class="highscore">
+            <div id="scoreBoard">
+                <h2 id="scoreBoardName">Hall of Fame</h2>
+            </div>
+        </section>
+    </article>
+</body>
+</html>

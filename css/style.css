@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+header img{
+    width: 300px;
+}
+
+input{
+    margin-top: 1rem;
+    width: 10rem;
+    font-size: 25px;
+    color: rgb(56, 15, 15);
+}
+
+#name{
+    background: rgb(56, 15, 15);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+article{
+    text-align: center;
+    height: 100vh;
+}
+
+section{
+    display: flex; 
+    justify-content: space-evenly;
+    color: white;
+}
+
+section h2{
+    font-size: 2rem;
+    padding: 0.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: hsl(25, 41%, 76%);
+}
+
+h1{
+    background-color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0rem 0rem 1rem 0rem;
+    padding: 1rem;
+}
+
+.btn {
+background: rgb(175, 234, 253);
+border-radius: 5px;
+border: none;
+cursor: pointer;
+}
+
+.btn img{
+    width: 20%;
+}
+
+#compResult img{
+    transform: rotateY(180deg);
+}
+
+#computerScore , #playerScore{
+    font-size: 35px;
+}
+
+#announcment{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 5rem;
+    background: radial-gradient(circle, rgba(163, 119, 99, 0.888) 0%, rgba(54,15,15,0) 70%);
+}
+
+#sten{
+    background-color: #bcd0f0;
+}
+
+#pase{
+    background-color:#e6bcf0;
+}
+
+#sax{
+    background-color:#f0ebbc;
+}
+
+p{
+    color: white;
+    font-size: 25px;
+}
+
+#pimg{
+    animation-name: playerMove;
+    animation-duration: 2s;
+}
+
+#cimg{
+    animation-name: computerMove;
+    animation-duration: 2s;
+}
+
+.highscore{
+    padding: 1rem 5rem;
+    min-height: 220px;
+}
+
+.highscore div{
+    background-color: rgba(163, 119, 99);
+    border-radius: 5px;
+    width: 80rem; 
+}
+
+
+.playerScore{
+    display: flex;
+    justify-content: space-between;
+}
+
+.playerScore h2{
+    font-size: 25px;
+    margin-left: 25rem;
+}
+
+.playerScore p{
+    margin-right: 25rem;
+}
+
+#socreBoard{
+    min-height: 1280px;
+    background-color: red;
+}
+
+#scoreBoardName{
+    border-bottom: dashed rgb(150, 109, 90) 3px;
+}
+
+@keyframes playerMove {
+    0%   {
+        transform: translateX(-10px);
+    }
+    25%  {
+        transform: translateX(0px);
+    }
+    50%  {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes computerMove {
+    0%   {
+        transform: rotateY(180deg) translateX(-10px);
+    }
+    25%  {
+        transform: rotateY(180deg) translateX(0px);
+    }
+    50%  {
+        transform: rotateY(180deg) translateX(-10px);
+    }
+    100% {
+        transform: rotateY(180deg) translateX(0px);
+    }
+}
